@@ -10,10 +10,10 @@ import random
 from datetime import datetime
 import vertexai
 import streamlit as st
-from langchain.llms import OpenAI, PromptTemplate
+from langchain_community.llms import OpenAI, PromptTemplate
 from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.llms import VertexAI
+from langchain_community.llms import VertexAI
 from langchain import PromptTemplate, LLMChain
 from google.cloud import aiplatform
 from google.oauth2 import service_account
