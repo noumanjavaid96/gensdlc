@@ -20,6 +20,10 @@ from google.cloud import aiplatform
 from google.oauth2 import service_account
 from vertexai.preview.language_models import TextGenerationModel
 
+# Use the gcp_service_account key from secrets
+credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"]
+)
 
 
 # Page title
@@ -48,7 +52,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
         
 # Global Settings and Config
-project_id = "learning-351419"
+project_id = "whyt-group-wordpress-email"
 loc = "us-central1"
 
 # Confuguration Section Starts
