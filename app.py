@@ -10,7 +10,7 @@ import random
 from datetime import datetime
 import vertexai
 import streamlit as st
-from langchain import OpenAI, PromptTemplate
+from langchain.llms import OpenAI, PromptTemplate
 from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.llms import VertexAI
@@ -50,7 +50,7 @@ loc = "us-central1"
 
 # Confuguration Section Starts
 #primary_model_name = st.sidebar.selectbox("Model", ["text-bison@001"])
-primary_model_name = st.sidebar.selectbox("Model", ["gemini-pro"])
+primary_model_name = st.sidebar.selectbox("Model", ["gemini-1.5-pro"])
 temperature = st.sidebar.number_input("Temperature _(Higher value will result in more **random** responses)_", 0.0, 1.0, 0.3)
 max_output_tokens = st.sidebar.number_input("Max Output Tokens _(Number of tokens that the model will **generate**)_", 200, 2048, 1024)
 top_p = st.sidebar.number_input("Top_p _(Higher value will result in more **creative** responses)_", 0.0, 1.0, 0.5)
