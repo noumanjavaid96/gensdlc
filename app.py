@@ -15,11 +15,17 @@ from langchain import PromptTemplate
 from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_google_vertexai import VertexAI
-from langchain import PromptTemplate, LLMChain
+from langchain_core.prompts import PromptTemplate
+from langchain.chains import LLMChain
 from google.cloud import aiplatform
 from google.oauth2 import service_account
 from vertexai.preview.language_models import TextGenerationModel
 
+# # /home/adminuser/venv/lib/python3.11/site-packages/langchain/__init__.py:30: UserWarning: Importing PromptTemplate from langchain root module is no longer supported. Please use langchain_core.prompts.PromptTemplate instead.
+
+#   warnings.warn(
+
+# # /home/adminuser/venv/lib/python3.11/site-packages/langchain/__init__.py:30: UserWarning: Importing LLMChain from langchain root module is no longer supported. Please use  instead.
 # Use the gcp_service_account key from secrets
 credentials = service_account.Credentials.from_service_account_info(
     st.secrets["gcp_service_account"]
