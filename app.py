@@ -10,7 +10,8 @@ import random
 from datetime import datetime
 import vertexai
 import streamlit as st
-from langchain_community.llms import OpenAI, PromptTemplate
+from langchain_community.llms import OpenAI
+from langchain import PromptTemplate
 from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.llms import VertexAI
