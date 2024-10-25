@@ -14,16 +14,18 @@ from langchain_community.llms import OpenAI
 from langchain import PromptTemplate
 from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
-from langchain_community.llms import VertexAI
+from langchain_google_vertexai import VertexAI
 from langchain import PromptTemplate, LLMChain
 from google.cloud import aiplatform
 from google.oauth2 import service_account
 from vertexai.preview.language_models import TextGenerationModel
 
+
+
 # Page title
-st.set_page_config(page_title="SDLC Agent powered by GCP Vertex Generative A.I", page_icon=":random:", layout="wide")
+st.set_page_config(page_title="SDLC Agent powered by Renesis-CoPilot", page_icon=":random:", layout="wide")
 st.write(f'<style>{css.v1}</style>', unsafe_allow_html=True)
-st.title('💫 SDLC AI Agent')
+st.title('💫 CoPilot AI Agent')
 
 # Remove whitespace from the top of the page and sidebar
 st.markdown("""
