@@ -1,5 +1,9 @@
-streamlit==1.24.0
+streamlit
 google-cloud-aiplatform
 vertexai
 langchain
 tiktoken
+openai
+langchain-community
+langchain-core
+langchain-experimental
