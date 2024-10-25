@@ -48,7 +48,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
         
 # Global Settings and Config
-project_id = "learning-351419"
+project_id = "ai-text-extraction"
 loc = "us-central1"
 
 # Confuguration Section Starts
