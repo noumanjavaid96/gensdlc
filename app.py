@@ -58,7 +58,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
         
 # Global Settings and Config
-project_id = "whyt-group-wordpress-email"
+project_id = "for-nouman-testing"
 loc = "us-central1"
 
 # Confuguration Section Starts
