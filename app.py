@@ -16,7 +16,7 @@ from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_google_vertexai import VertexAI
 from langchain_core.prompts import PromptTemplate 
-from langchain_core.prompts import LLMChain
+from langchain.chains import LLMChain
 from google.cloud import aiplatform
 from google.oauth2 import service_account
 from vertexai.preview.language_models import TextGenerationModel
