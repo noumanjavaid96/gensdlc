@@ -96,7 +96,7 @@ sample_code_gen_qns = [
 
 @st.cache_resource
 def generate_code(txt, lang_option):
-    PROJECT_ID = "learning-351419"  # @param {type:"string"}
+    PROJECT_ID = "for-nouman-testing"  # @param {type:"string"}
     vertexai.init(project=PROJECT_ID, location="us-central1")
 
     # Prompt Template
@@ -339,7 +339,7 @@ if submit_button:
         
         #time.sleep(10)
         with tab1:
-            response_prod_backlog = generate_product_backlog(text_input.strip())
+            response_prod_backlog = generate_product_backlog(text_input())
             result_prod_backlog.append(response_prod_backlog)
             
             # Display backlog
@@ -350,7 +350,7 @@ if submit_button:
         
         with tab2:
             if BACKLOG_GEN:
-                response_api = generate_api(text_input.strip(), response_prod_backlog)
+                response_api = generate_api(text_input(), response_prod_backlog)
                 result_api.append(response_api)
                 st.session_state["two"] = True
 
@@ -361,7 +361,7 @@ if submit_button:
                 API_GEN = True
                 
         with tab3:
-            response_code = generate_code(text_input.strip(), lang_option)
+            response_code = generate_code(text_input(), lang_option)
             result_code.append(response_code)
             st.session_state["three"] = True
 
@@ -373,7 +373,7 @@ if submit_button:
             
         with tab4:
             if BACKLOG_GEN:
-                response_test_case = generate_test_cases(text_input.strip(), response_prod_backlog)
+                response_test_case = generate_test_cases(text_input(), response_prod_backlog)
                 result_test_case.append(response_test_case)
                 st.session_state["four"] = True
             
@@ -390,7 +390,7 @@ if submit_button:
         
         with tab6:
             if CODE_GEN and BACKLOG_GEN:
-                response_doc = generate_documentation(text_input.strip(), response_prod_backlog.strip(), response_code.strip())
+                response_doc = generate_documentation(text_input(), response_prod_backlog(), response_code())
                 result_doc.append(response_doc)
                 st.session_state["six"] = True
             
